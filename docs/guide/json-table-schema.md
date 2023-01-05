@@ -38,7 +38,7 @@ The alias of a table. If provided, it will be used for describing the data objec
 
 - Type: `string[]`
 
-`pk` is a getter property. Users don't need to provide it, it will be generated automatically after [standardize()](). It returns the primary key(s) of the table. If the table has no primary key, it returns an empty array. Actualy, we do require a primary key for a table, it is important for the CRUD operations.
+`pk` is a getter property. Users don't need to provide it, it will be generated automatically after [standardize()](/guide/build-table-schema). It returns the primary key(s) of the table. If the table has no primary key, it returns an empty array. Actualy, we do require a primary key for a table, it is important for the CRUD operations.
 
 
 ## ColumnDefinition
