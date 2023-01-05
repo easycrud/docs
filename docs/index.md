@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide/what-is-easycrud
+      link: /guide/what-easycrud-is-and-is-not
     - theme: alt
       text: View on GitHub
       link: https://github.com/easycrud
