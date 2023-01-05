@@ -25,7 +25,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2013 QIA YANG'
+      copyright: 'Copyright © 2023 QIA YANG'
     },
   },
 })
@@ -52,11 +52,16 @@ function sidebarGuide() {
       ]
     },
     {
+      text: 'Components',
+      items: [
+        { text: 'React', link: '/guide/components-react' }
+      ]
+    },
+    {
       text: 'Toolkits',
       items: [
-        { text: 'SQL Statement', link: '/guide/sql-statement' },
-        { text: 'JSON Schema', link: '/guide/json-schema' },
-        { text: 'GraphQL Object', link: '/guide/graphql-object' }
+        { text: 'Build Table Schema', link: '/guide/build-table-schema' },
+        { text: 'Converter', link: '/guide/converter' }
       ]
     }
   ]
