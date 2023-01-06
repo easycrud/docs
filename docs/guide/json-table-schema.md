@@ -153,6 +153,17 @@ The method used for formatting the column name. Default is `camel`. It is used f
 
 - For `schemaToSQL`: convert the JSON Table Schema to SQL statements.
 
+```TypeScript
+interface TableOptions {
+  // ...
+  sql: {
+    dropIfExists?: boolean,
+    engine?: string,
+    autoIncrement?: string
+  }
+}
+```
+
 | Property | Type | Description | Default | Optional |
 | --- | --- | --- | --- | --- |
 | dropIfExists | `boolean` | Whether to drop table if exists before create | `false` | `true` |
@@ -161,7 +172,7 @@ The method used for formatting the column name. Default is `camel`. It is used f
 
 ### Options within `@easycrud/server`  
 
-```js
+```TypeScript
 export type TableOperate = 'read' | 'create' | 'update' | 'delete';
 
 export interface TableOptions extends BaseTableOptions {
