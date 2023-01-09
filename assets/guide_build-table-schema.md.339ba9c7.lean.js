@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./app.9e97bff7.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/build-table-schema.md","lastUpdated":1672911311000}'),s={name:"guide/build-table-schema.md"};function c(r,o,d,n,i,l){return a(),t("div")}const _=e(s,[["render",c]]);export{m as __pageData,_ as default};
