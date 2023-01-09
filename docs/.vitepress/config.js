@@ -49,6 +49,7 @@ function sidebarGuide() {
           text: 'RESTful API', 
           items: [
             {text: 'Endpoints', link: '/guide/restful-api-endpoints' },
+            {text: 'Database', link: '/guide/restful-api-database' },
             {text: 'Configuration', link: '/guide/restful-api-config' },
             {text: 'Example', link: '/guide/restful-api-example' }
           ] 
@@ -56,6 +57,7 @@ function sidebarGuide() {
         { 
           text: 'GraphQL API', 
           items: [
+            {text: 'Coming', link: '/guide/graphql' }
           ] 
         },
         {
