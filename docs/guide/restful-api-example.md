@@ -1,8 +1,6 @@
-# RESTful API
+# Example
 
-Based on JSON Table Schema, `@easycrud/server` package is able to generate RESTful style APIs for performing CRUD (create, read, update, delete) operations on resources.
-
-For example, suppose we have such a JSON Table Schema:
+Suppose we have such a JSON Table Schema:
 
 ```json
 {
@@ -46,7 +44,3 @@ The generated APIs will be:
 - `POST /users` create a user.
 - `PUT /users/:id` update a user by id.
 - `DELETE /users/:id` delete a user by id.
-
-The first two routers can be appended query parameters to filter the result.
-- fuzzy search: `column=value`
-- range search: `column=value1,value2` (column>=value1 and column<=value2)
