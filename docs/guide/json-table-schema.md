@@ -63,7 +63,7 @@ The alias of a column. If provided, it will be used for describing the data obje
 The type of the column. The available types are the same as the types of the database you are using. For example, if you are using MySQL, the available types are `int`, `varchar`, `text`, etc.   
 A type includes the length or range of the column is accepted, like `varchar(255)`, `int(11)`, `decimal(10,2)`.
 
-::: info
+::: info NOTE
 We do consider about defining a set of basic types, but we plan to support multiple databases, currently including MySQL/MariaDB, PostgreSQL. Each database has its own types, we don't want to limit the types to a subset of the database types in this period. We may change the idea if it make things weird in practice. In nutshell, we still think about how to make it easier to use and keep the flexibility. If you have some good ideas, please let us know.
 :::
 
@@ -109,6 +109,12 @@ The comment of the column.
 
 The `ON UPDATE` clause of the column. Usually be `CURRENT_TIMESTAMP`.
 
+### hide
+
+- Type: `boolean`
+
+Don't let the column used in APIs or displayed in front end. Default is `false`.
+
 ## IndexDefinition
 
 ### columns
@@ -141,7 +147,7 @@ Whether the index is primary. Default is `false`. If primary key is set here, it
 
 - Type: `string | undefined`
 
-The database that the table belongs to. If users want to connect to multiple databases on server side, this property is required and should be the same as the database name in the connection string.
+The database that the table belongs to. If users want to connect to multiple databases on server side, this property is required and should be the same as the database name in the connection string. See also [dbConfig](/guide/restful-api-config#dbconfig).
 
 ### columnFormatter
 
@@ -172,28 +178,7 @@ interface TableOptions {
 
 ### Options within `@easycrud/server`  
 
-```TypeScript
-export type TableOperate = 'read' | 'create' | 'update' | 'delete';
-
-export interface TableOptions extends BaseTableOptions {
-  /**
-   * The options for configuring row-level permissions.
-   */
-  rowPermission?: {
-    /**
-     * The name of the columns where values are used for permission check.
-     */
-    column: string | string[];
-    /**
-     * Operations that require permission check.
-     */
-    operates: TableOperate[];
-  }
-}
-```
-
-
-
+See more details in [Server Options](/guide/server-options).
 
 ## Example
 

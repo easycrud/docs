@@ -45,21 +45,11 @@ function sidebarGuide() {
       collapsible: true,
       items: [
         { text: 'Introduction', link: '/guide/server-intro' },
-        { 
-          text: 'RESTful API', 
-          items: [
-            {text: 'Endpoints', link: '/guide/restful-api-endpoints' },
-            {text: 'Database', link: '/guide/restful-api-database' },
-            {text: 'Configuration', link: '/guide/restful-api-config' },
-            {text: 'Example', link: '/guide/restful-api-example' }
-          ] 
-        },
-        { 
-          text: 'GraphQL API', 
-          items: [
-            {text: 'Coming', link: '/guide/graphql' }
-          ] 
-        },
+        { text: 'Database', link: '/guide/server-database' },
+        { text: 'Configuration', link: '/guide/server-config' },
+        { text: 'Schema Options', link: '/guide/server-options' },
+        { text: 'RESTful API', link: '/guide/restful-api' },
+        { text: 'GraphQL API', link: '/guide/graphql' },
         {
           text: 'Usage',
           items: [
