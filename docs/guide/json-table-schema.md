@@ -147,7 +147,7 @@ Whether the index is primary. Default is `false`. If primary key is set here, it
 
 - Type: `string | undefined`
 
-The database that the table belongs to. If users want to connect to multiple databases on server side, this property is required and should be the same as the database name in the connection string. See also [dbConfig](/guide/restful-api-config#dbconfig).
+The database that the table belongs to. If users want to connect to multiple databases on server side, this property is required and should be the same as the database name in the connection string. See also [dbConfig](/guide/server-config#dbconfig).
 
 ### columnFormatter
 
