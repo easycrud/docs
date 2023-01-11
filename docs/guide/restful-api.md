@@ -9,16 +9,24 @@ Based on a JSON Table Schema, the generated resource endpoints are:
 > `{resource}` is alias or name of the table.   
 
 - `GET /all_{resource}`  
+
   Get all resources without pagination. Depends on size of the table, this endpoint may returns a large dataset.
-- `GET /{resource}?[page=n&pageSize=m]`  
-  Get a collection resource with pagination. The default value of `pageSize` is 20.
+
+- `GET /{resource}?[page=n&pageSize=m&orderBy=columnKey[,(asc|desc)]]`  
+
+  Get a collection resource with pagination. The default value of `pageSize` is 20. If a column key is specified in `orderBy`, the result will be sorted by the column. The default sort order is `desc` if not specified.
+  
 - `GET /{resource}/:pk`  
+
   Get a singleton resource by primary key.
-- `POST /{resource}`        
+- `POST /{resource}`       
+
   Create a new resource.
-- `PUT /{resource}/:pk`       
+- `PUT /{resource}/:pk`      
+
   Update a resource by primary key.
 - `DELETE /{resource}/:pk`     
+
   Delete a resource by primary key.
 
 ## Primary Keys

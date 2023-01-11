@@ -142,7 +142,7 @@ Type:
 (pk: Record<string, any>, permission?: Record<string, any>): Promise<any>;
 ```
 
-The `getByPk` function is used to query a record by primary key from the table. A permission object can be passed to check the permission of the record. See also [Row Permission](/guide/server-options.html#row-permission).
+The `getByPk` function is used to query a record by primary key from the table. A `permission` object can be passed to check the user permission of the record. See also [Row Permission](/guide/server-options.html#row-permission).
 
 ### `delByPk`
 
@@ -152,7 +152,7 @@ Type:
 (pk: Record<string, any>, permission?: Record<string, any>): Promise<number | { err: unknown; }>;
 ```
 
-The `delByPk` function is used to delete a record by primary key from the table. A permission object can be passed to check the permission of the record.
+The `delByPk` function is used to delete a record by primary key from the table. A `permission` object can be passed to check the user permission of the record.
 
 ### `create`
 
@@ -173,7 +173,7 @@ Type:
 (pk: Record<string, any>, permission?: Record<string, any>, data: Record<string, any>): Promise<number | { err: unknown; }>;
 ```
 
-The `updateByPk` function is used to update a record by primary key in the table. A permission object can be passed to check the permission of the record.
+The `updateByPk` function is used to update a record by primary key in the table. A `permission` object can be passed to check the user permission of the record.
 
 ## Usage
 
