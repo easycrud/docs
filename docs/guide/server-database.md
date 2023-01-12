@@ -32,14 +32,14 @@ export default class Dao {
     }> | {
         err: unknown;
     }>;
-    getByPk(pk: Record<string, any>, permission?: Record<string, any>): Promise<any>;
-    delByPk(pk: Record<string, any>, permission?: Record<string, any>): Promise<number | {
+    getByPk(pk: Record<string, any>): Promise<any>;
+    delByPk(pk: Record<string, any>): Promise<number | {
         err: unknown;
     }>;
     create(data: Record<string, any>): Promise<number[] | {
         err: unknown;
     }>;
-    updateByPk(pk: Record<string, any>, permission?: Record<string, any>, data: Record<string, any>): Promise<number | {
+    updateByPk(pk: Record<string, any>, data: Record<string, any>): Promise<number | {
         err: unknown;
     }>;
 }
@@ -139,20 +139,20 @@ The `paginate` function is used to query records from the table with pagination.
 Type:
 
 ```TypeScript
-(pk: Record<string, any>, permission?: Record<string, any>): Promise<any>;
+(pk: Record<string, any>): Promise<any>;
 ```
 
-The `getByPk` function is used to query a record by primary key from the table. A `permission` object can be passed to check the user permission of the record. See also [Row Permission](/guide/server-options.html#row-permission).
+The `getByPk` function is used to query a record by primary key from the table. See also [Row Permission](/guide/server-options.html#row-permission).
 
 ### `delByPk`
 
 Type:
 
 ```TypeScript
-(pk: Record<string, any>, permission?: Record<string, any>): Promise<number | { err: unknown; }>;
+(pk: Record<string, any>): Promise<number | { err: unknown; }>;
 ```
 
-The `delByPk` function is used to delete a record by primary key from the table. A `permission` object can be passed to check the user permission of the record.
+The `delByPk` function is used to delete a record by primary key from the table.
 
 ### `create`
 
@@ -170,10 +170,10 @@ The `create` function is used to create a record in the table.
 Type:
 
 ```TypeScript
-(pk: Record<string, any>, permission?: Record<string, any>, data: Record<string, any>): Promise<number | { err: unknown; }>;
+(pk: Record<string, any>, data: Record<string, any>): Promise<number | { err: unknown; }>;
 ```
 
-The `updateByPk` function is used to update a record by primary key in the table. A `permission` object can be passed to check the user permission of the record.
+The `updateByPk` function is used to update a record by primary key in the table.
 
 ## Usage
 

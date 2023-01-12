@@ -10,7 +10,7 @@ EASYCRUD is currently in `Pre-alpha` status. It is not ready for production, the
 
 - 🛠️ [toolkits](/guide/build-table-schema)   
   A Set of Utilities for JSON Table Schema.  
-- 🖥️ [server](/guide/integrate-with-koa)   
+- 🖥️ [server](/guide/server-intro)   
   Create RESTful or GraphQL API server based on JSON Table Schema.  
 - 📱 [client](/guide/client)   
   Create API client based on JSON Table Schema.  
