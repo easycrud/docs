@@ -48,15 +48,12 @@ function sidebarGuide() {
         { text: 'Database', link: '/guide/server-database' },
         { text: 'Configuration', link: '/guide/server-config' },
         { text: 'Schema Options', link: '/guide/server-options' },
-        { text: 'RESTful API', link: '/guide/restful-api' },
-        { text: 'GraphQL API', link: '/guide/graphql' },
-        {
-          text: 'Usage',
+        { text: 'RESTful API', link: '/guide/restful-api', 
           items: [
             { text: 'Integrate with Koa', link: '/guide/integrate-with-koa' }
           ]
-        }
-        
+        },
+        { text: 'GraphQL API', link: '/guide/graphql' }
       ]
     },
     {

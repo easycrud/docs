@@ -32,14 +32,14 @@ export default class Dao {
     }> | {
         err: unknown;
     }>;
-    getByPk(pk: Record<string, any>): Promise<any>;
-    delByPk(pk: Record<string, any>): Promise<number | {
+    getByFields(fields: Record<string, any>): Promise<any>;
+    delByFields(fields: Record<string, any>): Promise<number | {
         err: unknown;
     }>;
     create(data: Record<string, any>): Promise<number[] | {
         err: unknown;
     }>;
-    updateByPk(pk: Record<string, any>, data: Record<string, any>): Promise<number | {
+    updateByFields(fields: Record<string, any>, data: Record<string, any>): Promise<number | {
         err: unknown;
     }>;
 }
@@ -134,25 +134,25 @@ Type:
 
 The `paginate` function is used to query records from the table with pagination. It is implemented with the help of [knex-paginate](https://github.com/felixmosh/knex-paginate).
 
-### `getByPk`
+### `getByFields`
 
 Type:
 
 ```TypeScript
-(pk: Record<string, any>): Promise<any>;
+(fields: Record<string, any>): Promise<any>;
 ```
 
-The `getByPk` function is used to query a record by primary key from the table. See also [Row Permission](/guide/server-options.html#row-permission).
+The `getByFields` function is used to query a record by fields from the table.
 
-### `delByPk`
+### `delByFields`
 
 Type:
 
 ```TypeScript
-(pk: Record<string, any>): Promise<number | { err: unknown; }>;
+(fields: Record<string, any>): Promise<number | { err: unknown; }>;
 ```
 
-The `delByPk` function is used to delete a record by primary key from the table.
+The `delByFields` function is used to delete a record by fields from the table.
 
 ### `create`
 
@@ -165,15 +165,15 @@ Type:
 The `create` function is used to create a record in the table.
 
 
-### `updateByPk`
+### `updateByFields`
 
 Type:
 
 ```TypeScript
-(pk: Record<string, any>, data: Record<string, any>): Promise<number | { err: unknown; }>;
+(fields: Record<string, any>, data: Record<string, any>): Promise<number | { err: unknown; }>;
 ```
 
-The `updateByPk` function is used to update a record by primary key in the table.
+The `updateByFields` function is used to update a record by fields in the table.
 
 ## Usage
 
