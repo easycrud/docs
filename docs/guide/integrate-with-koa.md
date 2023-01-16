@@ -129,7 +129,7 @@ const crud = new Crud({ routerConfig });
 (dao: Dao) => Router.IMiddleware;
 ```
 
-The request handler is a router middleware function. The parameter `dao` is a `Dao` instance. See [Database](/guide/server-database.html#data-access-object) for more details.
+The request handler is a router middleware function. The parameter `dao` is a `Dao` instance. See [Database](/guide/server-database#data-access-object) for more details.
 
 
 ### Overwrite router
@@ -165,7 +165,7 @@ app.use(async (ctx, next) => {
 
 ### Response 
 
-To return [standard data format](/guide/restful-api.html#response), use `ctx.reply`.
+To return [standard data format](/guide/restful-api#response), use `ctx.reply`.
 
 ```TypeScript
 ctx.reply({ id: 1 });

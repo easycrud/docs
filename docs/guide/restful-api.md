@@ -15,7 +15,7 @@ Based on a JSON Table Schema, the generated resource endpoints are:
 - `GET /{resource}?[page=n&pageSize=m&orderBy=columnKey[,(asc|desc)]]`  
 
   Get a collection resource with pagination. The default value of `pageSize` is 20. If a column key is specified in `orderBy`, the result will be sorted by the column. The default sort order is `desc` if not specified.
-  
+
 - `GET /{resource}/:pk`  
 
   Get a singleton resource by primary key.
@@ -78,7 +78,7 @@ All endpoints return the standard data format in JSON:
 When sending request data or receiving response data, the column keys follow the priority below:
 
 - Use the alias of the column if it is set.
-- Use the formatted name of the column. See [Column Formatter](/guide/json-table-schema.html#columnformatter) for details.
+- Use the formatted name of the column. See [Column Formatter](/guide/json-table-schema#columnformatter) for details.
 - Use the name of the column.
 
 ## Example

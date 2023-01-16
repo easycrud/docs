@@ -74,6 +74,7 @@ function sidebarGuide() {
       text: 'Toolkits',
       collapsible: true,
       items: [
+        { text: 'Introduction', link: '/guide/toolkits-intro' },
         { text: 'Build Table Schema', link: '/guide/build-table-schema' },
         { text: 'Converter', link: '/guide/converter' }
       ]

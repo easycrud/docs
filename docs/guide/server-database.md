@@ -61,7 +61,7 @@ The name of the table of the data access object.
 
 Type: `Record<string, string>`
 
-The map of the [column keys](/guide/restful-api.html#column-keys) and the original column names. This map is constructed automatically while parsing the table schema. It is used for `select`, `insert`, `update`, etc. See also [Knex Identifier Syntax](https://knexjs.org/guide/query-builder.html#identifier-syntax). For example: 
+The map of the [column keys](/guide/restful-api#column-keys) and the original column names. This map is constructed automatically while parsing the table schema. It is used for `select`, `insert`, `update`, etc. See also [Knex Identifier Syntax](https://knexjs.org/guide/query-builder#identifier-syntax). For example: 
 
 ```json
 {
@@ -108,7 +108,7 @@ Type:
 (query: Knex.QueryBuilder, conditions: Record<string, any>): Knex.QueryBuilder<any, any>;
 ```
 
-The `buildWhereClause` function is used to construct the `where` clause for the query from request parameters. See also [Search](/guide/restful-api.html#search). Basic usage:
+The `buildWhereClause` function is used to construct the `where` clause for the query from request parameters. See also [Search](/guide/restful-api#search). Basic usage:
 
 ```TypeScript
 buildWhereClause(baseQuery, transform(requestParmas))

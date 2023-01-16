@@ -82,6 +82,6 @@ export type GetUserPermission = ((meta?: any) => string | Record<string, any>) |
 
 The `getUserPermission` option is used to specify the function for getting the information of user to verify operate permissions. It returns a string or an object. 
 
-The return value will be compared with the value of column(s) specified in [permission configuration](/guide/server-options#permissions) of table schemas. If there are multiple columns set, the return value should be an object. The keys of the object should be the same as the [column keys](/guide/restful-api.html#column-keys).
+The return value will be compared with the value of column(s) specified in [permission configuration](/guide/server-options#permissions) of table schemas. If there are multiple columns set, the return value should be an object. The keys of the object should be the same as the [column keys](/guide/restful-api#column-keys).
 
 The `meta` parameter is helpful for retriving user information from requests. For example, while [integarting with Koa](/guide/integrate-with-koa), the `ctx` object is passed as `meta` parameter.
