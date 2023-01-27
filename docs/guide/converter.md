@@ -21,6 +21,25 @@ CLI
 npx schema2sql -t pg -s schema.json
 ```
 
+### Table Schema Options
+
+```TypeScript
+interface TableOptions {
+  // ...
+  sql: {
+    dropIfExists?: boolean,
+    engine?: string,
+    autoIncrement?: string
+  }
+}
+```
+
+| Property | Type | Description | Default | Optional |
+| --- | --- | --- | --- | --- |
+| dropIfExists | `boolean` | Whether to drop table if exists before create | `false` | `true` |
+| engine | `string` | The engine of the MySQL table. | `'InnoDB'` | `true` |
+| autoIncrement | `number` | The start value of the auto increment column. | - | `true` |
+
 ### Example
 
 The examples on this page are all based on this [schema](/guide/json-table-schema.html#example).

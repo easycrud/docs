@@ -157,24 +157,7 @@ The method used for formatting the column name. Default is `camel`. It is used f
 
 ### Options within `@easycrud/toolkits`
 
-- For `schemaToSQL`: convert the JSON Table Schema to SQL statements.
-
-```TypeScript
-interface TableOptions {
-  // ...
-  sql: {
-    dropIfExists?: boolean,
-    engine?: string,
-    autoIncrement?: string
-  }
-}
-```
-
-| Property | Type | Description | Default | Optional |
-| --- | --- | --- | --- | --- |
-| dropIfExists | `boolean` | Whether to drop table if exists before create | `false` | `true` |
-| engine | `string` | The engine of the MySQL table. | `'InnoDB'` | `true` |
-| autoIncrement | `number` | The start value of the auto increment column. | - | `true` |
+- For [`schemaToSQL`](/guide/converter#options): convert the JSON Table Schema to SQL statements.
 
 ### Options within `@easycrud/server`  
 
@@ -243,7 +226,9 @@ See more details in [Server Options](/guide/server-options).
     }
   },
   "options": {
-    "dropIfExists": true
+    "sql": {
+      "dropIfExists": true
+    }
   }
 }
 ```
